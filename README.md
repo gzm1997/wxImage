@@ -62,7 +62,7 @@ python：
 
     friends = itchat.get_friends(update=True)[0:]
 
-然后使用itchat的get_head_img(userName=none)函数来爬取好友列表的头像,b并下载到本地：
+然后使用itchat的get_head_img(userName=none)函数来爬取好友列表的头像,并下载到本地：
 
 ```
 num = 0
