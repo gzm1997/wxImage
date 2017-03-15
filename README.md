@@ -41,6 +41,10 @@
 
 用手机微信右上角的扫一扫，确认登陆即可。
 
+稍等片刻，你打开手机微信，找到信息栏的微信传输助手，会看到如下：
+
+![微信文件传输助手][9]
+
 ------
 
 ## 核心
@@ -74,7 +78,7 @@ for i in friends:
 	fileImage.close()
 	num += 1
 ```
-计算出每张头像缩小后的尺寸(由于为了拼接之后可以用来作为为微信头像，所以合成的图片大小都是640 *640的，因为微信头像大小就是640 * 640)
+计算出每张头像缩小后的尺寸(由于为了拼接之后可以用来作为为微信头像，所以合成的图片大小都是640 * 640的，因为微信头像大小就是640 * 640)
 
 计算每张头像缩小后的边长(默认为正方形)：
 
@@ -114,6 +118,7 @@ for i in pics:
     itchat.send_image(user + ".jpg", 'filehelper')
 
 ------
+
 ###完整代码（下载本人[github项目][8]会更好点）：
 ```
 from numpy import *
@@ -189,9 +194,12 @@ itchat.send_image(user + ".jpg", 'filehelper')
 
 
 
+
 ```
 
  
+
+
   [1]: https://github.com/15331094/wxImage
   [2]: https://github.com/15331094/wxImage/blob/master/screenshots/@38d3133a3c5556b510cbe0d83557cfaf6923ede6845501b000c8ebef984cb68c.jpg?raw=true
   [3]: https://github.com/15331094/wxImage/blob/master/screenshots/@7464eb52a847b7cb7698f2f004586e9d22ed5d148a07da30386c2a726e900320.jpg?raw=true
@@ -199,4 +207,5 @@ itchat.send_image(user + ".jpg", 'filehelper')
   [5]: https://github.com/15331094/wxImage/blob/master/screenshots/@f5c98c1d7b53eef38e4db58663ab5f3b93d49f333e81a61afc6c21b349a874f0.jpg?raw=true
   [6]: https://github.com/15331094/wxImage
   [7]: https://github.com/15331094/wxImage/blob/master/screenshots/wxid_eujni1y71a522_1489555725169_73.png?raw=true
-  [8]: https://github.com/15331094/wxImage
+[8]: https://github.com/15331094/wxImage
+[9]: https://github.com/15331094/wxImage/blob/master/screenshots/360321781025374987.jpg?raw=true
