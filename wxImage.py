@@ -8,12 +8,6 @@ import PIL.Image as Image
 from os import listdir
 import math
 
-
-myheaders = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'}
-
-myRequests = requests.Session()
-myRequests.headers.update(myheaders)
-
 itchat.auto_login(enableCmdQR=True)
 
 friends = itchat.get_friends(update=True)[0:]
@@ -55,11 +49,14 @@ y = 0
 
 for i in pics:
 	try:
+		#打开图片
 		img = Image.open(user + "/" + i)
 	except IOError:
 		print("Error: 没有找到文件或读取文件失败")
 	else:
+		#缩小图片
 		img = img.resize((eachsize, eachsize), Image.ANTIALIAS)
+		#拼接图片
 		toImage.paste(img, (x * eachsize, y * eachsize))
 		x += 1
 		if x == numline:
