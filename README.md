@@ -126,12 +126,6 @@ import PIL.Image as Image
 from os import listdir
 import math
 
-
-myheaders = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'}
-
-myRequests = requests.Session()
-myRequests.headers.update(myheaders)
-
 itchat.auto_login(enableCmdQR=True)
 
 friends = itchat.get_friends(update=True)[0:]
@@ -198,8 +192,6 @@ itchat.send_image(user + ".jpg", 'filehelper')
 ```
 
  
-
-
   [1]: https://github.com/15331094/wxImage
   [2]: https://github.com/15331094/wxImage/blob/master/screenshots/@38d3133a3c5556b510cbe0d83557cfaf6923ede6845501b000c8ebef984cb68c.jpg?raw=true
   [3]: https://github.com/15331094/wxImage/blob/master/screenshots/@7464eb52a847b7cb7698f2f004586e9d22ed5d148a07da30386c2a726e900320.jpg?raw=true
