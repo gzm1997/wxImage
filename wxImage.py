@@ -1,7 +1,4 @@
-from numpy import *
 import itchat
-import urllib
-import requests
 import os
 
 import PIL.Image as Image
